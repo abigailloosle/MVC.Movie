@@ -133,7 +133,7 @@ namespace MvcMovie2._0.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,ReleaseDate,Genre,Price")] Movie movie)
         {
             if (id != movie.Id)
             {
@@ -158,7 +158,7 @@ namespace MvcMovie2._0.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
             return View(movie);
         }
